@@ -197,5 +197,7 @@ class WebCrawlerTests(unittest.TestCase):
         self.assertNotIn("https://external.com/page", crawler.visited)
 
 if __name__ == "__main__":
-    unittest.main()
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "test":
+        unittest.main()
+    else:
+        main()
